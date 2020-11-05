@@ -52,7 +52,12 @@ https://github.com/gulec2000/jenkins-maven-project.git
 
 - Click `apply` and `save`. Note that the script `Jenkinsfile` should be placed under root folder of repo.
 
-- Maven Settings
+# Java Installation
+- sudo yum update -y
+- sudo amazon-linux-extras install java-openjdk11 -y
+- sudo yum install java-devel 
+
+# Maven Settings
 
 - Maven Intallation on ec2 Instance and setting uo the environment
 
@@ -64,11 +69,11 @@ https://github.com/gulec2000/jenkins-maven-project.git
 - sudo echo "export M2_HOME=/opt/maven" >> /etc/profile.d/maven.sh
 - sudo echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/maven.sh
 - source /etc/profile.d/maven.sh
-- Open Jenkins GUI on web browser
 
-- GIT installation on ec2 instance
+# GIT installation on ec2 instance
  - sudo yum install git -y
 
+# Open Jenkins GUI on web browser
 - Setting System Maven Path for default usage
 
 - Go to `Manage Jenkins`
