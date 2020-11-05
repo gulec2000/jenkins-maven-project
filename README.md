@@ -53,14 +53,15 @@ https://github.com/gulec2000/jenkins-maven-project.git
 - Click `apply` and `save`. Note that the script `Jenkinsfile` should be placed under root folder of repo.
 
 # Java Installation
+'''
 - sudo yum update -y
 - sudo amazon-linux-extras install java-openjdk11 -y
 - sudo yum install java-devel 
-
+'''
 # Maven Settings
 
-- Maven Intallation on ec2 Instance and setting uo the environment
-
+- 'Maven' Installation on 'ec2 Instance' and setting uo the environment
+'''
 - cd /opt
 - wget https://ftp.itu.edu.tr/Mirror/Apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
 - tar -zxvf $(ls | grep apache-maven-*-bin.tar.gz)
@@ -69,10 +70,11 @@ https://github.com/gulec2000/jenkins-maven-project.git
 - sudo echo "export M2_HOME=/opt/maven" >> /etc/profile.d/maven.sh
 - sudo echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/maven.sh
 - source /etc/profile.d/maven.sh
-
-# GIT installation on ec2 instance
+'''
+# GIT installation on 'ec2 instance'
+'''
  - sudo yum install git -y
-
+'''
 # Open Jenkins GUI on web browser
 - Setting System Maven Path for default usage
 
@@ -83,7 +85,7 @@ https://github.com/gulec2000/jenkins-maven-project.git
     - for `Name`, enter `PATH+EXTRA` 
     - for `Value`, enter `/opt/maven/bin`
 
-- Setting a specific Maven Release in Jenkins for usage
+- Setting a 'specific Maven Release' in Jenkins for usage
 
 - Go to the `Global Tool Configuration`
 
@@ -94,7 +96,7 @@ https://github.com/gulec2000/jenkins-maven-project.git
 
 - Since the Jenkins Server would be  running on Docker Machine, we could leverage from docker image of maven to setup the java and maven environment.
 
-- Create a `Jenkinsfile` with the following pipeline script. This is for Docker image
+- Create a `Jenkinsfile` with the following pipeline script. This is for 'Docker image'
 
 ```groovy
 pipeline {
@@ -130,7 +132,7 @@ pipeline {
 }
 ```
 
-- For native structured Jenkins Server
+- For 'native structured Jenkins Server'
 
 ```groovy
 pipeline {
