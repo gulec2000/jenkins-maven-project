@@ -72,8 +72,8 @@ https://github.com/gulec2000/jenkins-maven-project.git
 - tar -zxvf $(ls | grep apache-maven-*-bin.tar.gz)
 - rm -rf $(ls | grep apache-maven-*-bin.tar.gz)
 - sudo ln -s $(ls | grep apache-maven*) maven
-- sudo echo "export M2_HOME=/opt/maven" >> /etc/profile.d/maven.sh
-- sudo echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/maven.sh
+- sudo echo 'export M2_HOME=/opt/maven' >> /etc/profile.d/maven.sh
+- sudo echo 'export PATH=${M2_HOME}/bin:${PATH}' >> /etc/profile.d/maven.sh
 - source /etc/profile.d/maven.sh
 ```
 # GIT installation on 'ec2 instance'
