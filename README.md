@@ -1,6 +1,8 @@
 # jenkins-maven-project
-```text Building Jenkins Pipelines on Amazon Linux 2 AWS EC2 Instance```
-```text Configuring Jenkins Pipeline with GitHub Webhook to Build the a Java Maven Project```
+```text Building Jenkins Pipelines on Amazon Linux 2 AWS EC2 Instance
+```
+```text Configuring Jenkins Pipeline with GitHub Webhook to Build the a Java Maven Project
+```
 
 - To build the `java` maven project with Jenkins pipeline using the `Jenkinsfile` and `GitHub Webhook`. To accomplish this task, we need;
 
