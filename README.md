@@ -53,7 +53,7 @@ https://github.com/gulec2000/jenkins-maven-project.git
 - Click `apply` and `save`. Note that the script `Jenkinsfile` should be placed under root folder of repo.
 
 # Java Installation
-'''
+'''text
 - sudo yum update -y
 - sudo amazon-linux-extras install java-openjdk11 -y
 - sudo yum install java-devel 
@@ -61,7 +61,7 @@ https://github.com/gulec2000/jenkins-maven-project.git
 # Maven Settings
 
 - 'Maven' Installation on 'ec2 Instance' and setting uo the environment
-'''
+'''text
 - cd /opt
 - wget https://ftp.itu.edu.tr/Mirror/Apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
 - tar -zxvf $(ls | grep apache-maven-*-bin.tar.gz)
@@ -72,7 +72,7 @@ https://github.com/gulec2000/jenkins-maven-project.git
 - source /etc/profile.d/maven.sh
 '''
 # GIT installation on 'ec2 instance'
-'''
+'''text
  - sudo yum install git -y
 '''
 # Open Jenkins GUI on web browser
