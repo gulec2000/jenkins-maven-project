@@ -54,7 +54,7 @@ https://github.com/gulec2000/jenkins-maven-project.git
 
 - Maven Settings
 
-- Maven Intallation and setting uo the environment
+- Maven Intallation on ec2 Instance and setting uo the environment
 
 - cd /opt
 - wget https://ftp.itu.edu.tr/Mirror/Apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
@@ -65,6 +65,9 @@ https://github.com/gulec2000/jenkins-maven-project.git
 - sudo echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/maven.sh
 - source /etc/profile.d/maven.sh
 - Open Jenkins GUI on web browser
+
+- GIT installation on ec2 instance
+ - sudo yum install git -y
 
 - Setting System Maven Path for default usage
 
