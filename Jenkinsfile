@@ -1,25 +1,30 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'maven:3-openjdk-8'
+            args '-v /root/.m2:/root/.m2'
+        }
+    }
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -f hello-app/pom.xml -B -DskipTests clean package'
-            }
-            post {
-                success {
-                    echo "Now Archiving the Artifacts....."
-                    archiveArtifacts artifacts: '**/*.jar'
-                }
+                sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn -f hello-app/pom.xml test'
+                sh 'mvn test'
             }
             post {
                 always {
-                    junit 'hello-app/target/surefire-reports/*.xml'
+                    junit 'target/surefire-reports/*.xml'
                 }
+            }
+        }
+        stage('Deliver') {
+            steps {
+                sh 'chmod +x deliver-script.sh'
+                sh './deliver-script.sh'
             }
         }
     }
