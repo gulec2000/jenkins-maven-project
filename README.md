@@ -68,10 +68,9 @@ https://github.com/gulec2000/jenkins-maven-project.git
 - 'Maven' Installation on 'ec2 Instance' and setting uo the environment
 ```bash
 - cd /opt
-- wget https://ftp.itu.edu.tr/Mirror/Apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
-- tar -zxvf $(ls | grep apache-maven-*-bin.tar.gz)
-- rm -rf $(ls | grep apache-maven-*-bin.tar.gz)
-- sudo ln -s $(ls | grep apache-maven*) maven
+- wget https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+- sudo tar xzf apache-maven-3.6.3-bin.tar.gz
+- sudo ln -s apache-maven-3.6.3 maven
 - sudo echo 'export M2_HOME=/opt/maven' >> /etc/profile.d/maven.sh
 - sudo echo 'export PATH=${M2_HOME}/bin:${PATH}' >> /etc/profile.d/maven.sh
 - source /etc/profile.d/maven.sh
